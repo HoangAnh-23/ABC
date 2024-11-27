@@ -48,7 +48,7 @@
 
         <!-- Hóa đơn bán hàng -->
         <StackPanel Grid.Column="2" Background="White" Margin="0,0,0,0">
-            <Label Name="lblHoaDon" Content="HÓA ĐƠN BÁN HÀNG" FontSize="28" Foreground="Black" Margin="71,20,20,0" FontFamily="Verdana"></Label>
+            <Label Name="lblHoaDon" Content="HÓA ĐƠN BÁN HÀNG" FontSize="28" Foreground="Black" Margin="70,20,20,0" FontFamily="Verdana"></Label>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Khách hàng: " Margin="20,0,0,0"></Label>
                 <TextBox x:Name="PCUs" Width="120" Height="30" Margin="0,0,0,0" BorderThickness="2"></TextBox>
