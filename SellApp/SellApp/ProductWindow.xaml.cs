@@ -80,14 +80,22 @@ namespace SellApp
             decimal price;
             string notes = PDetail.Text.Trim() == "Ghi chú" ? null : PDetail.Text.Trim();
 
-            // Kiểm tra bắt buộc ProductName và Price không được để trống
-            if (string.IsNullOrEmpty(productName))
+            // Kiểm tra cả tên sản phẩm và giá tiền cùng lúc
+            if ((string.IsNullOrEmpty(productName) || productName == "Tên sản phẩm") &&
+                (PPrice.Text.Trim() == "Giá Tiền" || string.IsNullOrEmpty(PPrice.Text) || !decimal.TryParse(PPrice.Text, out price)))
             {
-                MessageBox.Show("Tên sản phẩm không được để trống.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Bạn chưa nhập tên và giá sản phẩm.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (string.IsNullOrEmpty(PPrice.Text) || !decimal.TryParse(PPrice.Text, out price))
+            // Kiểm tra riêng từng trường hợp nếu cần
+            if (string.IsNullOrEmpty(productName) || productName == "Tên sản phẩm")
+            {
+                MessageBox.Show("Bạn chưa nhập tên sản phẩm.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (PPrice.Text.Trim() == "Giá Tiền" || string.IsNullOrEmpty(PPrice.Text) || !decimal.TryParse(PPrice.Text, out price))
             {
                 MessageBox.Show("Giá tiền không hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -147,7 +155,7 @@ namespace SellApp
             // Chuyển đổi ProductId từ chuỗi sang số nguyên
             if (!int.TryParse(PID.Text, out int productId))
             {
-                MessageBox.Show("ID sản phẩm không hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                
                 return;
             }
 
@@ -155,7 +163,7 @@ namespace SellApp
             var existingProduct = myContext.Products.FirstOrDefault(p => p.ProductId == productId);
             if (existingProduct == null)
             {
-                MessageBox.Show("Không tìm thấy sản phẩm cần sửa.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                
                 return;
             }
 
@@ -167,17 +175,27 @@ namespace SellApp
             decimal price;
 
             // Kiểm tra tính hợp lệ của dữ liệu
-            if (string.IsNullOrEmpty(productName))
+            // Kiểm tra cả tên sản phẩm và giá tiền cùng lúc
+            if ((string.IsNullOrEmpty(productName) || productName == "Tên sản phẩm") &&
+                (PPrice.Text.Trim() == "Giá Tiền" || string.IsNullOrEmpty(PPrice.Text) || !decimal.TryParse(PPrice.Text, out price)))
             {
-                MessageBox.Show("Tên sản phẩm không được để trống.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Bạn chưa nhập tên và giá sản phẩm.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (!decimal.TryParse(PPrice.Text, out price))
+            // Kiểm tra riêng từng trường hợp nếu cần
+            if (string.IsNullOrEmpty(productName) || productName == "Tên sản phẩm")
             {
-                MessageBox.Show("Giá sản phẩm không hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Bạn chưa nhập tên sản phẩm.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+
+            if (PPrice.Text.Trim() == "Giá Tiền" || string.IsNullOrEmpty(PPrice.Text) || !decimal.TryParse(PPrice.Text, out price))
+            {
+                MessageBox.Show("Giá tiền không hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
 
             // Cập nhật thông tin sản phẩm
             existingProduct.ProductName = productName;
@@ -215,14 +233,14 @@ namespace SellApp
             // Kiểm tra xem đã chọn sản phẩm để xóa chưa
             if (string.IsNullOrEmpty(PID.Text))
             {
-                MessageBox.Show("Vui lòng chọn sản phẩm cần xóa.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //MessageBox.Show("Vui lòng chọn sản phẩm cần xóa.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             // Chuyển đổi ProductId từ chuỗi sang số nguyên
             if (!int.TryParse(PID.Text, out int productId))
             {
-                MessageBox.Show("ID sản phẩm không hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show("ID sản phẩm không hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -317,9 +335,9 @@ namespace SellApp
             }
 
             // Lọc sản phẩm dựa trên văn bản tìm kiếm
-            var filteredProducts = myContext.Products
+                var filteredProducts = myContext.Products
                 .Where(p => p.ProductName.ToLower().Contains(searchText) ||
-                            p.Barcode.ToLower().Contains(searchText))
+                            p.Barcode.Contains(searchText))
                 .Select(p => new
                 {
                     p.ProductId,

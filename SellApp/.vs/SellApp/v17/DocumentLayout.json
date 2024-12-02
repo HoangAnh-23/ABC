@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "D:\\Source Code\\TestGit\\SellApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\model\\sellappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\model\\sellappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\productwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\productwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\productwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\productwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\productwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\productwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Source Code\\TestGit\\SellApp\\SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\model\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\model\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\model\\sellappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\model\\sellappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|solutionrelative:sellapp\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Source Code\\TestGit\\SellApp\\SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2FD4A0C-1EB6-47D4-B520-F8681FFDB37D}|SellApp\\SellApp.csproj|d:\\source code\\testgit\\sellapp\\sellapp\\sellapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,20 +82,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml.cs",
-              "RelativeDocumentMoniker": "SellApp\\ProductWindow.xaml.cs",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml.cs",
-              "RelativeToolTip": "SellApp\\ProductWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SellApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SellApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAuwAcBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:54:24.653Z",
+              "WhenOpened": "2024-11-27T15:43:05.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\App.xaml",
               "RelativeDocumentMoniker": "SellApp\\App.xaml",
@@ -103,96 +107,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.g.cs",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
-              "RelativeDocumentMoniker": "SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
-              "RelativeToolTip": "SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:57:51.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OrderDetail.cs",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\OrderDetail.cs",
-              "RelativeDocumentMoniker": "SellApp\\Model\\OrderDetail.cs",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\OrderDetail.cs",
-              "RelativeToolTip": "SellApp\\Model\\OrderDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:53:46.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SellappContext.cs",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\SellappContext.cs",
-              "RelativeDocumentMoniker": "SellApp\\Model\\SellappContext.cs",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\SellappContext.cs",
-              "RelativeToolTip": "SellApp\\Model\\SellappContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:53:19.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\appsettings.json",
-              "RelativeDocumentMoniker": "SellApp\\appsettings.json",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\appsettings.json",
-              "RelativeToolTip": "SellApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-27T15:46:22.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SellApp",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\SellApp.csproj",
-              "RelativeDocumentMoniker": "SellApp\\SellApp.csproj",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\SellApp.csproj*",
-              "RelativeToolTip": "SellApp\\SellApp.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-27T15:45:59.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductWindow.xaml",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml",
-              "RelativeDocumentMoniker": "SellApp\\ProductWindow.xaml",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml",
-              "RelativeToolTip": "SellApp\\ProductWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T15:54:03.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "SellApp\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "SellApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T15:43:05.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\MainWindow.xaml",
@@ -200,8 +114,103 @@
               "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\MainWindow.xaml",
               "RelativeToolTip": "SellApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T15:43:08.774Z",
+              "WhenOpened": "2024-11-27T15:43:08.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductWindow.xaml",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml",
+              "RelativeDocumentMoniker": "SellApp\\ProductWindow.xaml",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml*",
+              "RelativeToolTip": "SellApp\\ProductWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T15:54:03.743Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SellApp\\ProductWindow.xaml.cs",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\ProductWindow.xaml.cs",
+              "RelativeToolTip": "SellApp\\ProductWindow.xaml.cs",
+              "ViewState": "AgIAAFEBAAAAAAAAAAAYwHoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T15:54:24.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "SellApp\\Model\\OrderDetail.cs",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\OrderDetail.cs",
+              "RelativeToolTip": "SellApp\\Model\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T15:53:46.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SellappContext.cs",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\SellappContext.cs",
+              "RelativeDocumentMoniker": "SellApp\\Model\\SellappContext.cs",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\Model\\SellappContext.cs",
+              "RelativeToolTip": "SellApp\\Model\\SellappContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T15:53:19.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\appsettings.json",
+              "RelativeDocumentMoniker": "SellApp\\appsettings.json",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\appsettings.json",
+              "RelativeToolTip": "SellApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-27T15:46:22.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.g.cs",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "RelativeDocumentMoniker": "SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "RelativeToolTip": "SellApp\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAABiLwB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T15:57:51.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "SellApp\\AssemblyInfo.cs",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\AssemblyInfo.cs",
+              "RelativeToolTip": "SellApp\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T16:23:15.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SellApp.csproj",
+              "DocumentMoniker": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\SellApp.csproj",
+              "RelativeDocumentMoniker": "SellApp\\SellApp.csproj",
+              "ToolTip": "D:\\Source Code\\TestGit\\SellApp\\SellApp\\SellApp.csproj",
+              "RelativeToolTip": "SellApp\\SellApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-27T15:45:59.07Z"
             }
           ]
         },

@@ -9,8 +9,11 @@
       "SellApp/1.0.0": {
         "dependencies": {
           "ClosedXML": "0.104.2",
+          "DocumentFormat.OpenXml": "3.2.0",
+          "ESCPOS_NET": "3.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.3",
+          "Microsoft.Extensions.Caching.Memory": "9.0.0",
           "Microsoft.Extensions.Configuration.Json": "9.0.0",
           "MySql.Data": "9.1.0",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.2"
@@ -30,7 +33,7 @@
       "ClosedXML/0.104.2": {
         "dependencies": {
           "ClosedXML.Parser": "1.2.0",
-          "DocumentFormat.OpenXml": "3.1.1",
+          "DocumentFormat.OpenXml": "3.2.0",
           "ExcelNumberFormat": "1.1.0",
           "RBush": "4.0.0",
           "SixLabors.Fonts": "1.0.0"
@@ -50,25 +53,41 @@
           }
         }
       },
-      "DocumentFormat.OpenXml/3.1.1": {
+      "DocumentFormat.OpenXml/3.2.0": {
         "dependencies": {
-          "DocumentFormat.OpenXml.Framework": "3.1.1"
+          "DocumentFormat.OpenXml.Framework": "3.2.0"
         },
         "runtime": {
           "lib/net8.0/DocumentFormat.OpenXml.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.1.1.0"
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
           }
         }
       },
-      "DocumentFormat.OpenXml.Framework/3.1.1": {
+      "DocumentFormat.OpenXml.Framework/3.2.0": {
         "dependencies": {
           "System.IO.Packaging": "8.0.1"
         },
         "runtime": {
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.1.1.0"
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "ESCPOS_NET/3.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "SixLabors.ImageSharp": "2.1.3",
+          "SuperSimpleTcp": "2.4.0",
+          "System.IO.Ports": "6.0.0",
+          "System.Text.Json": "9.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESCPOS_NET.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -358,7 +377,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "8.0.3",
           "Microsoft.EntityFrameworkCore.Analyzers": "8.0.3",
-          "Microsoft.Extensions.Caching.Memory": "8.0.0",
+          "Microsoft.Extensions.Caching.Memory": "9.0.0",
           "Microsoft.Extensions.Logging": "8.0.0"
         },
         "runtime": {
@@ -409,29 +428,29 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.3"
         }
       },
-      "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+      "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
-      "Microsoft.Extensions.Caching.Memory/8.0.0": {
+      "Microsoft.Extensions.Caching.Memory/9.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Options": "8.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0",
           "Microsoft.Extensions.Primitives": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
@@ -490,7 +509,7 @@
       },
       "Microsoft.Extensions.DependencyInjection/8.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
@@ -499,11 +518,11 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
@@ -554,8 +573,8 @@
       "Microsoft.Extensions.Logging/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Options": "8.0.0"
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Logging.dll": {
@@ -564,26 +583,27 @@
           }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "System.Diagnostics.DiagnosticSource": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
-      "Microsoft.Extensions.Options/8.0.0": {
+      "Microsoft.Extensions.Options/9.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
           "Microsoft.Extensions.Primitives": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Options.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
@@ -615,7 +635,7 @@
           "K4os.Compression.LZ4.Streams": "1.3.8",
           "System.Buffers": "4.5.1",
           "System.Configuration.ConfigurationManager": "8.0.0",
-          "System.Diagnostics.DiagnosticSource": "8.0.1",
+          "System.Diagnostics.DiagnosticSource": "9.0.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Runtime.Loader": "4.3.0",
           "System.Security.Permissions": "8.0.0",
@@ -660,7 +680,7 @@
       },
       "MySqlConnector/2.3.5": {
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0"
         },
         "runtime": {
           "lib/net8.0/MySqlConnector.dll": {
@@ -689,11 +709,85 @@
           }
         }
       },
+      "runtime.linux-arm.runtime.native.System.IO.Ports/6.0.0": {
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "runtime.linux-arm64.runtime.native.System.IO.Ports/6.0.0": {
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "runtime.linux-x64.runtime.native.System.IO.Ports/6.0.0": {
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "runtime.native.System.IO.Ports/6.0.0": {
+        "dependencies": {
+          "runtime.linux-arm.runtime.native.System.IO.Ports": "6.0.0",
+          "runtime.linux-arm64.runtime.native.System.IO.Ports": "6.0.0",
+          "runtime.linux-x64.runtime.native.System.IO.Ports": "6.0.0",
+          "runtime.osx-arm64.runtime.native.System.IO.Ports": "6.0.0",
+          "runtime.osx-x64.runtime.native.System.IO.Ports": "6.0.0"
+        }
+      },
+      "runtime.osx-arm64.runtime.native.System.IO.Ports/6.0.0": {
+        "runtimeTargets": {
+          "runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "runtime.osx-x64.runtime.native.System.IO.Ports/6.0.0": {
+        "runtimeTargets": {
+          "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "SixLabors.Fonts/1.0.0": {
         "runtime": {
           "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/2.1.3": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.3.0"
+          }
+        }
+      },
+      "SuperSimpleTcp/2.4.0": {
+        "runtime": {
+          "lib/net5.0/SimpleTcp.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.0.0"
           }
         }
       },
@@ -770,7 +864,14 @@
           "System.Security.Cryptography.ProtectedData": "8.0.0"
         }
       },
-      "System.Diagnostics.DiagnosticSource/8.0.1": {},
+      "System.Diagnostics.DiagnosticSource/9.0.0": {
+        "runtime": {
+          "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
       "System.Diagnostics.EventLog/8.0.0": {},
       "System.IO/4.3.0": {
         "dependencies": {
@@ -794,6 +895,31 @@
           "lib/net8.0/System.IO.Pipelines.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "System.IO.Ports/6.0.0": {
+        "dependencies": {
+          "runtime.native.System.IO.Ports": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Ports.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net6.0/System.IO.Ports.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          },
+          "runtimes/win/lib/net6.0/System.IO.Ports.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       },
@@ -921,19 +1047,26 @@
       "path": "closedxml.parser/1.2.0",
       "hashPath": "closedxml.parser.1.2.0.nupkg.sha512"
     },
-    "DocumentFormat.OpenXml/3.1.1": {
+    "DocumentFormat.OpenXml/3.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2z9QBzeTLNNKWM9SaOSDMegfQk/7hDuElOsmF77pKZMkFRP/GHA/W/4yOAQD9kn15N/FsFxHn3QVYkatuZghiA==",
-      "path": "documentformat.openxml/3.1.1",
-      "hashPath": "documentformat.openxml.3.1.1.nupkg.sha512"
+      "sha512": "sha512-eDBT9G0sAWUvjgE8l8E5bGCFXgxCZXIecQ8dqUnj2PyxyMR5eBmLahqRRw3Q7uSKM3cKbysaL2mEY0JJbEEOEA==",
+      "path": "documentformat.openxml/3.2.0",
+      "hashPath": "documentformat.openxml.3.2.0.nupkg.sha512"
     },
-    "DocumentFormat.OpenXml.Framework/3.1.1": {
+    "DocumentFormat.OpenXml.Framework/3.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6APEp/ElZV58S/4v8mf4Ke3ONEDORs64MqdD64Z7wWpcHANB9oovQsGIwtqjnKihulOj7T0a6IxHIHOfMqKOng==",
-      "path": "documentformat.openxml.framework/3.1.1",
-      "hashPath": "documentformat.openxml.framework.3.1.1.nupkg.sha512"
+      "sha512": "sha512-e1neOKqRnSHUom4JQEorAoZ67aiJOp6+Xzsu0fc6IYfFcgQn6roo+w6i2w//N2u/5ilEfvLr35bNO9zaIN7r7g==",
+      "path": "documentformat.openxml.framework/3.2.0",
+      "hashPath": "documentformat.openxml.framework.3.2.0.nupkg.sha512"
+    },
+    "ESCPOS_NET/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9nnjPAcdue1u+zVwRAMRUtXlIW9iilvRG/aNUlaxonT1Bftc/ALYsiEx0zIDDLRHio6dztCEbkJO29k1ysmTXA==",
+      "path": "escpos_net/3.0.0",
+      "hashPath": "escpos_net.3.0.0.nupkg.sha512"
     },
     "ExcelNumberFormat/1.1.0": {
       "type": "package",
@@ -1061,19 +1194,19 @@
       "path": "microsoft.entityframeworkcore.tools/8.0.3",
       "hashPath": "microsoft.entityframeworkcore.tools.8.0.3.nupkg.sha512"
     },
-    "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+    "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3KuSxeHoNYdxVYfg2IRZCThcrlJ1XJqIXkAWikCsbm5C/bCjv7G0WoKDyuR98Q+T607QT2Zl5GsbGRkENcV2yQ==",
-      "path": "microsoft.extensions.caching.abstractions/8.0.0",
-      "hashPath": "microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-FPWZAa9c0H4dvOj351iR1jkUIs4u9ykL4Bm592yhjDyO5lCoWd+TMAHx2EMbarzUvCvgjWjJIoC6//Q9kH6YhA==",
+      "path": "microsoft.extensions.caching.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.caching.abstractions.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Caching.Memory/8.0.0": {
+    "Microsoft.Extensions.Caching.Memory/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7pqivmrZDzo1ADPkRwjy+8jtRKWRCPag9qPI+p7sgu7Q4QreWhcvbiWXsbhP+yY8XSiDvZpu2/LWdBv7PnmOpQ==",
-      "path": "microsoft.extensions.caching.memory/8.0.0",
-      "hashPath": "microsoft.extensions.caching.memory.8.0.0.nupkg.sha512"
+      "sha512": "sha512-zbnPX/JQ0pETRSUG9fNPBvpIq42Aufvs15gGYyNIMhCun9yhmWihz0WgsI7bSDPjxWTKBf8oX/zv6v2uZ3W9OQ==",
+      "path": "microsoft.extensions.caching.memory/9.0.0",
+      "hashPath": "microsoft.extensions.caching.memory.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.0": {
       "type": "package",
@@ -1110,12 +1243,12 @@
       "path": "microsoft.extensions.dependencyinjection/8.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyModel/8.0.0": {
       "type": "package",
@@ -1152,19 +1285,19 @@
       "path": "microsoft.extensions.logging/8.0.0",
       "hashPath": "microsoft.extensions.logging.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+    "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-arDBqTgFCyS0EvRV7O3MZturChstm50OJ0y9bDJvAcmEPJm0FFpFyjU/JLYyStNGGey081DvnQYlncNX5SJJGA==",
-      "path": "microsoft.extensions.logging.abstractions/8.0.0",
-      "hashPath": "microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-g0UfujELzlLbHoVG8kPKVBaW470Ewi+jnptGS9KUi6jcb+k2StujtK3m26DFSGGwQ/+bVgZfsWqNzlP6YOejvw==",
+      "path": "microsoft.extensions.logging.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Options/8.0.0": {
+    "Microsoft.Extensions.Options/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JOVOfqpnqlVLUzINQ2fox8evY2SKLYJ3BV8QDe/Jyp21u1T7r45x/R/5QdteURMR5r01GxeJSBBUOCOyaNXA3g==",
-      "path": "microsoft.extensions.options/8.0.0",
-      "hashPath": "microsoft.extensions.options.8.0.0.nupkg.sha512"
+      "sha512": "sha512-y2146b3jrPI3Q0lokKXdKLpmXqakYbDIPDV6r3M8SqvSf45WwOTzkyfDpxnZXJsJQEpAsAqjUq5Pu8RCJMjubg==",
+      "path": "microsoft.extensions.options/9.0.0",
+      "hashPath": "microsoft.extensions.options.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/9.0.0": {
       "type": "package",
@@ -1222,12 +1355,68 @@
       "path": "rbush/4.0.0",
       "hashPath": "rbush.4.0.0.nupkg.sha512"
     },
+    "runtime.linux-arm.runtime.native.System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-75q52H7CSpgIoIDwXb9o833EvBZIXJ0mdPhz1E6jSisEXUBlSCPalC29cj3EXsjpuDwr0dj1LRXZepIQH/oL4Q==",
+      "path": "runtime.linux-arm.runtime.native.system.io.ports/6.0.0",
+      "hashPath": "runtime.linux-arm.runtime.native.system.io.ports.6.0.0.nupkg.sha512"
+    },
+    "runtime.linux-arm64.runtime.native.System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xn2bMThmXr3CsvOYmS8ex2Yz1xo+kcnhVg2iVhS9PlmqjZPAkrEo/I40wjrBZH/tU4kvH0s1AE8opAvQ3KIS8g==",
+      "path": "runtime.linux-arm64.runtime.native.system.io.ports/6.0.0",
+      "hashPath": "runtime.linux-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512"
+    },
+    "runtime.linux-x64.runtime.native.System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-16nbNXwv0sC+gLGIuecri0skjuh6R1maIJggsaNP7MQBcbVcEfWFUOkEnsnvoLEjy0XerfibuRptfQ8AmdIcWA==",
+      "path": "runtime.linux-x64.runtime.native.system.io.ports/6.0.0",
+      "hashPath": "runtime.linux-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512"
+    },
+    "runtime.native.System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KaaXlpOcuZjMdmyF5wzzx3b+PRKIzt6A5Ax9dKenPDQbVJAFpev+casD0BIig1pBcbs3zx7CqWemzUJKAeHdSQ==",
+      "path": "runtime.native.system.io.ports/6.0.0",
+      "hashPath": "runtime.native.system.io.ports.6.0.0.nupkg.sha512"
+    },
+    "runtime.osx-arm64.runtime.native.System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fXG12NodG1QrCdoaeSQ1gVnk/koi4WYY4jZtarMkZeQMyReBm1nZlSRoPnUjLr2ZR36TiMjpcGnQfxymieUe7w==",
+      "path": "runtime.osx-arm64.runtime.native.system.io.ports/6.0.0",
+      "hashPath": "runtime.osx-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512"
+    },
+    "runtime.osx-x64.runtime.native.System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/As+zPY49+dSUXkh+fTUbyPhqrdGN//evLxo4Vue88pfh1BHZgF7q4kMblTkxYvwR6Vi03zSYxysSFktO8/SDQ==",
+      "path": "runtime.osx-x64.runtime.native.system.io.ports/6.0.0",
+      "hashPath": "runtime.osx-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512"
+    },
     "SixLabors.Fonts/1.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LFQsCZlV0xlUyXAOMUo5kkSl+8zAQXXbbdwWchtk0B4o7zotZhQsQOcJUELGHdfPfm/xDAsz6hONAuV25bJaAg==",
       "path": "sixlabors.fonts/1.0.0",
       "hashPath": "sixlabors.fonts.1.0.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/2.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8yonNRWX3vUE9k29ta0Hbfa0AEc0hbDjSH/nZ3vOTJEXmY6hLnGsjDKoz96Z+AgOsrdkAu6PdL/Ebaf70aitzw==",
+      "path": "sixlabors.imagesharp/2.1.3",
+      "hashPath": "sixlabors.imagesharp.2.1.3.nupkg.sha512"
+    },
+    "SuperSimpleTcp/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R/qDlUNKudP3QgbJogEv/KYFsAqNNHHr9vcx5l0664itKPBJ4ghRIatnKFI5INgnvwfcpfoqKx5TjmkCp1c2iA==",
+      "path": "supersimpletcp/2.4.0",
+      "hashPath": "supersimpletcp.2.4.0.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
@@ -1299,12 +1488,12 @@
       "path": "system.configuration.configurationmanager/8.0.0",
       "hashPath": "system.configuration.configurationmanager.8.0.0.nupkg.sha512"
     },
-    "System.Diagnostics.DiagnosticSource/8.0.1": {
+    "System.Diagnostics.DiagnosticSource/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vaoWjvkG1aenR2XdjaVivlCV9fADfgyhW5bZtXT23qaEea0lWiUljdQuze4E31vKM7ZWJaSUsbYIKE3rnzfZUg==",
-      "path": "system.diagnostics.diagnosticsource/8.0.1",
-      "hashPath": "system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512"
+      "sha512": "sha512-ddppcFpnbohLWdYKr/ZeLZHmmI+DXFgZ3Snq+/E7SwcdW4UnvxmaugkwGywvGVWkHPGCSZjCP+MLzu23AL5SDw==",
+      "path": "system.diagnostics.diagnosticsource/9.0.0",
+      "hashPath": "system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512"
     },
     "System.Diagnostics.EventLog/8.0.0": {
       "type": "package",
@@ -1333,6 +1522,13 @@
       "sha512": "sha512-eA3cinogwaNB4jdjQHOP3Z3EuyiDII7MT35jgtnsA4vkn0LUrrSHsU0nzHTzFzmaFYeKV7MYyMxOocFzsBHpTw==",
       "path": "system.io.pipelines/9.0.0",
       "hashPath": "system.io.pipelines.9.0.0.nupkg.sha512"
+    },
+    "System.IO.Ports/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dRyGI7fUESar5ZLIpiBOaaNLW7YyOBGftjj5Of+xcduC/Rjl7RjhEnWDvvNBmHuF3d0tdXoqdVI/yrVA8f00XA==",
+      "path": "system.io.ports/6.0.0",
+      "hashPath": "system.io.ports.6.0.0.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",

@@ -6,7 +6,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Drawing.Charts;
-
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System.Windows;  // Đảm bảo có import đúng thư viện này
+using System.Windows.Controls;
+using WpfOrientation = System.Windows.Controls.Orientation;
 namespace SellApp
 {
     public partial class MainWindow : Window
@@ -18,6 +22,8 @@ namespace SellApp
         private SellappContext myContext = new SellappContext();
 
         private ObservableCollection<OrderDetail> invoiceDetails = new ObservableCollection<OrderDetail>();
+
+
 
         public MainWindow()
         {
@@ -82,10 +88,18 @@ namespace SellApp
 
         private void RefreshInvoiceGrid()
         {
+            // Tính toán lại số thứ tự (STT) cho các sản phẩm trong hóa đơn
+            int index = 1;
+            foreach (var item in invoiceDetails)
+            {
+                item.STT = index++;
+            }
+
             // Không cần tái tạo ObservableCollection, chỉ cần gán trực tiếp
             dgHoaDon.ItemsSource = null;
             dgHoaDon.ItemsSource = invoiceDetails;
         }
+
 
 
         // Phương thức tăng số lượng
@@ -166,7 +180,7 @@ namespace SellApp
 
             var filteredProducts = myContext.Products
                 .Where(p => p.ProductName.ToLower().Contains(searchText) ||
-                            p.Barcode.ToLower().Contains(searchText))
+                            p.Barcode.Contains(searchText))
                 .Select(p => new
                 {
                     p.ProductId,
@@ -251,149 +265,141 @@ namespace SellApp
         }
 
 
-
-        private void btnPrint(object sender, RoutedEventArgs e)
+        // Phương thức tạo nội dung hóa đơn
+        private StackPanel CreateInvoiceContent()
         {
-            if (invoiceDetails.Count == 0) // Kiểm tra danh sách có dữ liệu không
+            // Tạo StackPanel với chiều rộng phù hợp khổ K80
+            var panel = new StackPanel
             {
-                MessageBox.Show("Không có sản phẩm nào trong hóa đơn để in.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            // Tạo workbook và worksheet
-            var workbook = new XLWorkbook();
-            var worksheet = workbook.AddWorksheet("Hóa đơn");
-
-            // Tiêu đề - Cửa hàng và hóa đơn
-            worksheet.Cell(1, 1).Value = "CỬA HÀNG SIM KHA";
-            worksheet.Cell(1, 1).Style.Font.SetBold(true).Font.SetFontSize(16);
-            worksheet.Cell(1, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
-            worksheet.Cell(1, 1).Style.Alignment.SetVertical(XLAlignmentVerticalValues.Top);
-
-            worksheet.Cell(1, 5).Value = "HÓA ĐƠN BÁN HÀNG";
-            worksheet.Cell(1, 5).Style.Font.SetBold(true).Font.SetFontSize(16);
-            worksheet.Cell(1, 5).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
-            worksheet.Cell(1, 5).Style.Alignment.SetVertical(XLAlignmentVerticalValues.Top);
-
-            // Địa chỉ và số điện thoại
-            worksheet.Cell(3, 1).Value = "Địa chỉ: Xóm 2 An Tiến - Chí Hòa - Hưng Hà - Thái Bình";
-            worksheet.Cell(3, 1).Style.Font.SetBold(true).Font.SetFontSize(12);
-            worksheet.Cell(3, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
-
-            worksheet.Cell(4, 1).Value = "SDT: 0973835155";
-            worksheet.Cell(4, 1).Style.Font.SetBold(true).Font.SetFontSize(12);
-            worksheet.Cell(4, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
-
-            // Tên khách hàng nếu có
-            if (!string.IsNullOrEmpty(PCUs.Text))
-            {
-                worksheet.Cell(5, 1).Value = "Tên khách hàng: " + PCUs.Text;
-                worksheet.Cell(5, 1).Style.Font.SetFontSize(12);
-                worksheet.Cell(5, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
-            }
-
-            // Dữ liệu bảng hóa đơn
-            int row = 7; // Dữ liệu bắt đầu từ dòng 7
-            worksheet.Cell(row, 1).Value = "Tên sản phẩm";
-            worksheet.Cell(row, 2).Value = "Đơn vị";
-            worksheet.Cell(row, 3).Value = "Số lượng";
-            worksheet.Cell(row, 4).Value = "Đơn giá";
-            worksheet.Cell(row, 5).Value = "Thành tiền";
-
-            // Định dạng tiêu đề bảng (căn giữa và in đậm)
-            worksheet.Range("A7:E7").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-            worksheet.Range("A7:E7").Style.Font.SetBold(true);
-            worksheet.Range("A7:E7").Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
-            worksheet.Range("A7:E7").Style.Border.InsideBorder = XLBorderStyleValues.Thin;
-
-            // Thêm viền cho các ô dữ liệu
-            worksheet.Columns("A:E").AdjustToContents(); // Tự động điều chỉnh cột theo nội dung
-
-            // Thêm dữ liệu vào bảng hóa đơn
-            foreach (var item in invoiceDetails)
-            {
-                row++;
-                worksheet.Cell(row, 1).Value = item.ProductName;
-                worksheet.Cell(row, 2).Value = item.UnitBill;
-                worksheet.Cell(row, 3).Value = item.Quantity;
-                worksheet.Cell(row, 4).Value = item.UnitPrice * 1000; // Nhân giá tiền với 1000
-                worksheet.Cell(row, 5).Value = item.TotalPrice * 1000; // Nhân thành tiền với 1000
-
-                // Định dạng viền cho từng dòng dữ liệu
-                worksheet.Range($"A{row}:E{row}").Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
-                worksheet.Range($"A{row}:E{row}").Style.Border.InsideBorder = XLBorderStyleValues.Thin;
-            }
-
-            // In tổng tiền
-            row++;
-            worksheet.Cell(row, 4).Value = "Tổng tiền:";
-            worksheet.Cell(row, 5).Value = $"{invoiceDetails.Sum(item => item.TotalPrice) * 1000:#,##0} VND";
-            worksheet.Cell(row, 4).Style.Font.SetBold(true).Font.SetFontSize(14);
-            worksheet.Cell(row, 5).Style.Font.SetBold(true).Font.SetFontSize(14);
-            worksheet.Range($"D{row}:E{row}").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-
-            // Kiểm tra xem có nợ không, nếu có thì thêm "Còn nợ"
-            if (decimal.TryParse(PDeb.Text, out decimal debtAmount) && debtAmount > 0)
-            {
-                row++;
-                worksheet.Cell(row, 4).Value = "Còn nợ:";
-                worksheet.Cell(row, 5).Value = $"{debtAmount * 1000:#,##0} VND"; // Định dạng nợ theo định dạng VND
-                worksheet.Cell(row, 4).Style.Font.SetBold(true).Font.SetFontSize(14);
-                worksheet.Cell(row, 5).Style.Font.SetBold(true).Font.SetFontSize(14);
-                worksheet.Range($"D{row}:E{row}").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-            }
-
-            // Ngày tháng năm
-            worksheet.Cell(row + 1, 5).Value = "Ngày: " + System.DateTime.Now.ToString("dd/MM/yyyy");
-            worksheet.Cell(row + 1, 5).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
-            worksheet.Cell(row + 1, 5).Style.Font.SetFontSize(12);
-
-            // Lưu file Excel
-            // Tính tổng tiền hóa đơn
-            decimal totalAmount = invoiceDetails.Sum(item => item.TotalPrice);
-
-            // Gọi phương thức để tạo tên file
-            var fileName = FormatFileName(PCUs.Text, totalAmount); // Truyền cả tên khách hàng và tổng tiền vào phương thức
-
-            // Lưu file Excel
-            var saveFileDialog = new Microsoft.Win32.SaveFileDialog
-            {
-                Filter = "Excel Files|*.xlsx",
-                FileName = fileName // Sử dụng tên file vừa tạo
+                Width = 300, // Khổ giấy ~80mm (300px)
+                Margin = new System.Windows.Thickness(10) // Khoảng cách nội dung
             };
 
-            if (saveFileDialog.ShowDialog() == true)
+            // Dòng 1: Tên cửa hàng
+            TextBlock storeName = new TextBlock
             {
-                workbook.SaveAs(saveFileDialog.FileName); // Lưu file với tên đã tạo
+                Text = "CỬA HÀNG SIM KHA",
+                FontWeight = FontWeights.Bold,
+                FontSize = 16,
+                TextAlignment = System.Windows.TextAlignment.Center,
+                Margin = new System.Windows.Thickness(0, 5, 0, 5)
+            };
+            panel.Children.Add(storeName);
+
+            // Dòng 2: HÓA ĐƠN BÁN HÀNG
+            TextBlock title = new TextBlock
+            {
+                Text = "HÓA ĐƠN BÁN HÀNG",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                TextAlignment = System.Windows.TextAlignment.Center,
+                Margin = new System.Windows.Thickness(0, 5, 0, 10)
+            };
+            panel.Children.Add(title);
+
+            // Dòng 3: Thông tin khách hàng và ngày
+            TextBlock customerInfo = new TextBlock
+            {
+                Text = $"Tên khách hàng: {PCUs.Text}\nNgày: {DateTime.Now:dd/MM/yyyy}",
+                FontSize = 12,
+                Margin = new System.Windows.Thickness(0, 5, 0, 10)
+            };
+            panel.Children.Add(customerInfo);
+
+            // Dòng 4: Bảng hóa đơn
+            panel.Children.Add(new TextBlock
+            {
+                Text = "Tên SP          SL   Đ.Giá    Thành tiền",
+                FontWeight = FontWeights.Bold,
+                FontSize = 12,
+                Margin = new System.Windows.Thickness(0, 5, 0, 5)
+            });
+
+            foreach (var item in invoiceDetails)
+            {
+                StackPanel row = new StackPanel
+                {
+                    Orientation = System.Windows.Controls.Orientation.Horizontal,
+                    HorizontalAlignment = HorizontalAlignment.Stretch
+                };
+
+                row.Children.Add(new TextBlock
+                {
+                    Text = $"{item.ProductName}",
+                    FontSize = 12,
+                    Width = 120 // Cắt bớt tên dài
+                });
+
+                row.Children.Add(new TextBlock
+                {
+                    Text = $"{item.Quantity}",
+                    FontSize = 12,
+                    Width = 30,
+                    TextAlignment = System.Windows.TextAlignment.Center
+                });
+
+                row.Children.Add(new TextBlock
+                {
+                    Text = $"{item.UnitPrice * 1000:N0}",
+                    FontSize = 12,
+                    Width = 60,
+                    TextAlignment = System.Windows.TextAlignment.Right
+                });
+
+                row.Children.Add(new TextBlock
+                {
+                    Text = $"{item.TotalPrice * 1000:N0}",
+                    FontSize = 12,
+                    Width = 80,
+                    TextAlignment = System.Windows.TextAlignment.Right
+                });
+
+                panel.Children.Add(row);
             }
 
-            // Điều chỉnh cột D (Tổng tiền) theo chiều rộng nội dung
-            worksheet.Column(4).AdjustToContents();
-            worksheet.Column(4).Width = 30; // Thử set chiều rộng cột "Tổng tiền"
+            // Dòng tổng tiền
+            TextBlock totalAmountText = new TextBlock
+            {
+                Text = $"Tổng tiền: {(invoiceDetails.Sum(i => i.TotalPrice) * 1000):N0} VND",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                Margin = new System.Windows.Thickness(0, 10, 0, 5),
+                TextAlignment = System.Windows.TextAlignment.Right
+            };
+            panel.Children.Add(totalAmountText);
 
-            // Căn chỉnh lại cột Tổng tiền (cột 4 và cột 5)
-            worksheet.Cell(row, 4).Style.Alignment.SetVertical(XLAlignmentVerticalValues.Center); // Căn chỉnh dọc
-            worksheet.Cell(row, 5).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center); // Căn chỉnh ngang
+            // Dòng nợ (nếu có)
+            if (decimal.TryParse(PDeb.Text, out decimal debtAmount))
+            {
+                panel.Children.Add(new TextBlock
+                {
+                    Text = $"Còn nợ: {(debtAmount * 1000):N0} VND",
+                    FontSize = 12,
+                    FontWeight = FontWeights.Bold,
+                    Margin = new System.Windows.Thickness(0, 5, 0, 10),
+                    TextAlignment = System.Windows.TextAlignment.Right
+                });
+            }
 
-            // Điều chỉnh lại tất cả các cột nếu cần thiết
-            worksheet.Columns("A:E").AdjustToContents();
+            return panel;
         }
 
 
-        // Hàm xử lý tên khách hàng để loại bỏ khoảng trắng và ký tự đặc biệt
-        private string FormatFileName(string customerName, decimal totalAmount)
+        // Phương thức in hóa đơn
+        private void btnPrint(object sender, RoutedEventArgs e)
         {
-            // Nếu không có tên khách hàng, chỉ sử dụng tổng tiền
-            if (string.IsNullOrEmpty(customerName))
-                return $"{totalAmount:#,##0},000VND-HoaDonBanHang"; // Chỉ có tổng tiền và HoaDonBanHang
+            // Tạo nội dung hóa đơn
+            var printContent = CreateInvoiceContent();
 
-            // Nếu có tên khách hàng, tách tên thành các từ và viết hoa chữ đầu tiên của mỗi từ
-            var words = customerName.Split(' ');
-            var formattedName = string.Join("", words.Select(word =>
-                char.ToUpper(word[0]) + word.Substring(1).ToLower())); // Viết hoa chữ cái đầu
+            // Hiển thị hộp thoại in
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.PrintTicket.PageMediaSize = new System.Printing.PageMediaSize(80, 200); // Khổ K80, dài tùy hóa đơn
 
-            // Trả về tên file theo định dạng: Tên khách hàng - Tổng tiền - HoaDonBanHang
-            return $"{formattedName}-{totalAmount:#,##0},000VND-HoaDonBanHang";
+            if (printDialog.ShowDialog() == true)
+            {
+                // In trực tiếp
+                printDialog.PrintVisual(printContent, "Hóa đơn bán hàng");
+            }
         }
 
 
